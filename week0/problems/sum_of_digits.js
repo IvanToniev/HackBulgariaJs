@@ -1,18 +1,18 @@
 "use strict";
 
 var sum_of_digits = function (n) {
-  var nums = [];
+  var digits = [];
 
   if(n < 0) {
     n = (-1) * n;
   }
 
   while(n > 0) {
-    nums.push(n%10);
+    digits.push(n%10);
     n = parseInt(n/10);
   }
 
-  var sum = nums.reduce(function(n1, n2) {
+  var sum = digits.reduce(function(n1, n2) {
     return n1 + n2;
   });
 
