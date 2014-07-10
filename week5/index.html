@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <!-- MAIN BODY -->
+  <div class="wrapper container">
+    <ul id="actions" class="col-xs-2">
+      <li id="add_task"><button type="button" class="btn btn-default btn-small">Add a new task</button></li>
+      <li id="settings">
+        <button type="button" class="btn btn-default btn-small" data-toggle="modal" data-target="#modal_settings">Settings</button>
+      </li>
+    </ul>
+    <table id="tasks" class="col-xs-2">
+      <thead>
+        <th>Task</th>
+        <th>Date</th>
+        <th>Started</th>
+        <th>Options</th>
+      </thead>
+    </table>
+    <div id="info" class="col-xs-2">
+      <img src="#" width="150px" height="150px" id="picture_link"/>
+      <div id="user">Hello, pesho</div>
+    </div>
+  </div>
+  <!-- SETTINGS MODAL -->
+  <div class="modal fade" id="modal_settings" tabindex="-1"  role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">Settings</h4>
+      </div>
+      <div class="modal-body">
+        <form id="settings_form" action="#">
+          <ul>
+            <li>
+              <label for="color">Choose a color</label>
+              <input name="color" type="color" id="modal_color"/>
+            </li>
+            <li>
+              <label for="picture">A link to your picture</label>
+              <input name="picture" type="text" id="modal_picture_link"/>
+            </li>
+            <li>
+              <label form="username">Username</label>
+              <input type="text" name="username" id="modal_username"/>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save_settings">Save settings</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- NEW TASK MODAL -->
+</body>
+</html>
