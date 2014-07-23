@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div id="container">
+
+  </div>
+  <form id="people" method="POST" name="people">
+    <script id="person-template" type="text/x-handlebars-template">
+      <div class="person col-md-3" id={{id}}>
+        <input placeholder={{name}} class="person-name" type="text">
+        <button class="edit" type="button" disabled="true" >Edit</button>
+      </div>
+    </script>
+  </form>
+</body>
+</html>
