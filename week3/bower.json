@@ -1,0 +1,22 @@
+{
+  "name": "hackbulgaria week3",
+  "version": "1",
+  "homepage": "https://github.com/IvanToniev/HackBulgariaJs",
+  "authors": [
+    "IvanToniev <ivantoniev@gmail.com>"
+  ],
+  "description": "problems for week3",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1"
+  }
+}
