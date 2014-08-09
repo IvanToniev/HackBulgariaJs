@@ -26,3 +26,6 @@ Pair.prototype.toList = function() {
 Pair.prototype.combine = function(f) {
   return f(this.left, this.right);
 };
+
+var pair = new Pair(3, 3);
+console.log(pair);
