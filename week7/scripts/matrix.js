@@ -17,6 +17,27 @@ define(function() {
       return M;
     };
 
+    this.getRow = function(index) {
+      var row = [],
+          i = 0;
+
+      for(i = 0; i < this.getM(); i++) {
+        row.push(matrix[index][i]);
+      }
+
+      return row;
+    };
+
+    this.getCol = function(index) {
+      var col = [],
+          i = 0;
+
+      for(i = 0; i < this.getN(); i++) {
+        col.push(matrix[i][index]);
+      }
+
+      return col;
+    }
 
     this.setRow = function(index, row) {
       if(row.length === this.getM()){
@@ -38,7 +59,33 @@ define(function() {
 
     this.getData = function () {
       return matrix;
-    }
+    };
+
+    this.getAt = function(i, j) {
+      return matrix[i][j];
+    };
+
+    this.setAt = function(i, j, value) {
+      var copy = matrix;
+      copy[i][j] = value;
+      matrix = copy;
+    };
+
+    this.toString = function() {
+      var i = 0,
+          j = 0,
+          printable = '';
+
+      for(i = 0; i < this.getM(); i++) {
+        var row = [];
+        for(j = 0; j < this.getN(); j++) {
+          row.push(matrix[i][j]);
+        }
+        printable += (row.join(' ')) + '\n';
+      }
+
+      return printable.trim();
+    };
   }
 
   return Matrix;
